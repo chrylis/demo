@@ -1,0 +1,7 @@
+# DATAJPA-816 reproduction
+
+This project reproduces the issue in link:https://jira.spring.io/browse/DATAJPA-816[DATAJPA_816].
+
+As-is, the project is using the managed Spring Boot Hibernate dependency of 4.3.11.Final.
+Uncommenting the property in `pom.xml` will upgrade the project to Hibernate 5, and launching
+the application will fail because the package metadata is not scanned by Hibernate.
